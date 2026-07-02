@@ -1,0 +1,87 @@
+:root {
+  --primary: #0f172a;
+  --accent: #0284c7;
+  --bg: #f8fafc;
+  --card-bg: #ffffff;
+  --text: #334155;
+  --text-light: #64748b;
+  
+  /* Adding standard transition tokens for links/buttons */
+  --transition: all 0.2s ease-in-out;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* The root div where React injects your App component */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensures the page takes up the full screen height */
+  width: 100%;
+}
+
+main {
+  flex: 1 0 auto; /* Forces the main content to grow, pushing footer to the bottom */
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+section {
+  padding: 60px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+section:last-of-type {
+  border-bottom: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 24px;
+  position: relative;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  opacity: 0.85;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+button {
+  font-family: inherit;
+}
